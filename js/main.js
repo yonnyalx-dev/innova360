@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btnWa = document.getElementById('btn-whatsapp');
             if (btnWa && btnWa.classList.contains('active')) {
                 const text = encodeURIComponent("hola he visto la web de innova 360 y deseo recibir mi auditoria gratis");
-                window.open(`https://api.whatsapp.com/send?phone=36697484787&text=${text}`, '_blank');
+                window.location.href = `https://api.whatsapp.com/send?phone=36697484787&text=${text}`;
                 return;
             }
 
