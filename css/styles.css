@@ -566,14 +566,15 @@ button {
 .floating-wa {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 90;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 @media (min-width: 768px) {
-  .floating-wa { bottom: 40px; right: 40px; }
+  .floating-wa { bottom: 40px; right: 40px; left: auto; transform: none; }
 }
 
 .wa-combined-btn {
