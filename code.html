@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Innova360 | Auditoría de Presencia Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#363941",
+                    "on-surface": "#e1e2ec",
+                    "on-secondary-fixed": "#0d1c2d",
+                    "on-tertiary-container": "#461f00",
+                    "error": "#ffb4ab",
+                    "on-surface-variant": "#c2c6d6",
+                    "surface-container-high": "#272a31",
+                    "surface-tint": "#adc6ff",
+                    "outline-variant": "#424754",
+                    "secondary-container": "#39485a",
+                    "error-container": "#93000a",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary": "#502400",
+                    "surface": "#10131a",
+                    "inverse-on-surface": "#2e3038",
+                    "tertiary-fixed": "#ffdcc6",
+                    "primary": "#adc6ff",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "on-primary": "#002e6a",
+                    "on-primary-container": "#00285d",
+                    "on-secondary": "#233143",
+                    "surface-container-highest": "#32353c",
+                    "on-background": "#e1e2ec",
+                    "surface-dim": "#10131a",
+                    "inverse-primary": "#005ac2",
+                    "secondary-fixed-dim": "#b9c8de",
+                    "on-secondary-fixed-variant": "#39485a",
+                    "outline": "#8c909f",
+                    "surface-container-lowest": "#0b0e15",
+                    "secondary-fixed": "#d4e4fa",
+                    "surface-container": "#1d2027",
+                    "primary-container": "#4d8eff",
+                    "on-tertiary-fixed": "#311400",
+                    "surface-container-low": "#191b23",
+                    "secondary": "#b9c8de",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary-fixed": "#001a42",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-primary-fixed-variant": "#004395",
+                    "tertiary": "#ffb786",
+                    "on-secondary-container": "#a7b6cc",
+                    "surface-variant": "#32353c",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "background": "#10131a",
+                    "on-error": "#690005",
+                    "inverse-surface": "#e1e2ec",
+                    "tertiary-container": "#df7412"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "grid-margin": "40px",
+                    "section-gap-desktop": "120px",
+                    "base": "8px",
+                    "grid-gutter": "24px",
+                    "section-gap-mobile": "64px"
+            },
+            "fontFamily": {
+                    "display-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "caption": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-sm": ["clamp(32px, 8vw, 48px)", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "display-lg": ["clamp(40px, 10vw, 72px)", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-lg": ["clamp(24px, 5vw, 32px)", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #10131a; color: #e1e2ec; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass-hover:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(173, 198, 255, 0.3); transition: all 0.5s ease; }
+        .electric-glow { box-shadow: 0 0 30px rgba(77, 142, 255, 0.15); }
+        .text-gradient { background: linear-gradient(to right, #e1e2ec, #adc6ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #mobile-menu.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-[100] bg-surface/30 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-all duration-500">
+<div class="flex justify-between items-center px-6 md:px-grid-margin py-4 md:py-2 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Innova360 Logo" class="h-10 w-10 object-contain rounded-lg shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ZI5-M8-F0gRm7euJ4DXm_nGMQ7iSZjrPqBjWr6dmCaAiPAtulMJYQXn2k1GwW09t0UNpuG3qL3O9WrLpWBBglX_zPwlmgouTwkg_jtV5INHCsQBj3DxrVxUw4dl2GDAe9SaclyW_OD5plSPoj0-yBBYMTAkpMcIFrtLJhWtMidMAQmBQ4DsVA1RJoTWHYuyYZzALowoa6Gf1BH7Q5d5kwDMaLZ2PIDT_5FOlISHP9jSxkju5LC-82C4hPWz-ty_dtErXtuGabIY"/>
+<div class="font-display-sm text-2xl md:text-display-sm tracking-tighter text-on-surface">Innova360</div>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#">Solutions</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#">Insights</a>
+<a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#">Global Operations</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-primary text-on-primary px-6 py-2 font-label-md text-label-md rounded-full hover:brightness-110 transition-all">Get Started</button>
+<!-- Mobile Menu Toggle -->
+<button class="lg:hidden text-on-surface p-2" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Menu Drawer -->
+<div class="fixed inset-0 z-[110] bg-surface translate-x-full transition-transform duration-500 lg:hidden" id="mobile-menu">
+<div class="flex flex-col h-full p-8">
+<div class="flex justify-between items-center mb-12">
+<div class="flex items-center gap-3">
+<img alt="Innova360 Logo" class="h-8 w-8 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ZI5-M8-F0gRm7euJ4DXm_nGMQ7iSZjrPqBjWr6dmCaAiPAtulMJYQXn2k1GwW09t0UNpuG3qL3O9WrLpWBBglX_zPwlmgouTwkg_jtV5INHCsQBj3DxrVxUw4dl2GDAe9SaclyW_OD5plSPoj0-yBBYMTAkpMcIFrtLJhWtMidMAQmBQ4DsVA1RJoTWHYuyYZzALowoa6Gf1BH7Q5d5kwDMaLZ2PIDT_5FOlISHP9jSxkju5LC-82C4hPWz-ty_dtErXtuGabIY"/>
+<div class="font-display-sm text-2xl tracking-tighter text-on-surface">Innova360</div>
+</div>
+<button class="text-on-surface p-2" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-8">
+<a class="text-2xl font-bold text-primary" href="#" onclick="toggleMobileMenu()">Home</a>
+<a class="text-2xl font-medium text-on-surface-variant" href="#" onclick="toggleMobileMenu()">Solutions</a>
+<a class="text-2xl font-medium text-on-surface-variant" href="#" onclick="toggleMobileMenu()">Insights</a>
+<a class="text-2xl font-medium text-on-surface-variant" href="#" onclick="toggleMobileMenu()">Global Operations</a>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary py-4 font-bold rounded-full text-lg">Get Started</button>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<main class="relative pt-32 pb-section-gap-mobile md:pb-section-gap-desktop px-6 md:px-grid-margin max-w-[1440px] mx-auto overflow-hidden">
+<div class="grid grid-cols-12 gap-y-12 md:gap-grid-gutter items-center">
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-6 md:gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 glass rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-xs md:text-label-md text-on-surface-variant uppercase tracking-widest">Premium Digital Craftsmanship</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-gradient leading-tight">
+                    Si hoy un cliente busca tu negocio... <span class="block text-primary">¿te elige a ti o a tu competencia?</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Descubre cómo te ven tus futuros clientes antes de decidir y qué oportunidades estás perdiendo sin darte cuenta.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="w-full sm:w-auto bg-primary-container text-on-primary-container px-8 md:px-10 py-4 font-label-md text-label-md rounded-full electric-glow hover:scale-105 transition-transform duration-300" onclick="document.getElementById('audit-section').scrollIntoView({behavior: 'smooth'})">
+                        SOLICITA TU AUDITORÍA GRATUITA DE PRESENCIA DIGITAL
+                    </button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative">
+<div class="aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9] w-full glass rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface via-transparent to-primary/10 z-10"></div>
+<img alt="FerreTodo Contextual Brand Image" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA46g-xvd3GQ3DIiNqUmvj-BTDKPM4RlCcW1zudoEscCiWuYKkxhGbRPvwdJHvqLRll3JUFA38roQTwcIR7QdYkG06fU6m0aviSWjzXVVkZxXNgz668bXPc8vPWL1ZFOscBov3Q1HIrv7_Eklxe4EiXlAB3eM_BT5bIm1gmt5vEww15qAjha-5CVzIZmY8HEiAS4shdm-OGJfKkm0rz-djRI1b1i2bBQkIrr-qoiEZ_QFR5rul3BythiJyxc6eXg-7xgqXZ45ooSN8"/>
+<div class="absolute inset-0 flex items-end p-6 z-20">
+<div class="glass px-4 py-2 rounded-lg text-primary text-xs md:text-label-md backdrop-blur-md">
+                            Transformamos búsquedas en clientes.
+                        </div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center z-20">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full glass flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl md:text-4xl text-primary">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 blur-[100px] -z-10"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/10 blur-[80px] -z-10"></div>
+</div>
+</div>
+</main>
+<!-- Value Section: Real Case Results -->
+<section class="bg-surface-container-lowest py-section-gap-mobile md:py-section-gap-desktop border-y border-outline-variant/10">
+<div class="px-6 md:px-grid-margin max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center text-center mb-12 md:mb-20">
+<h2 class="font-display-sm text-display-sm text-on-surface mb-6">El impacto de una estrategia digital sólida</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl px-4">
+                    No solo diseñamos webs, creamos activos digitales que impulsan resultados medibles.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-grid-gutter">
+<!-- Real Case Study -->
+<div class="glass p-6 md:p-12 rounded-xl flex flex-col gap-8 transition-all duration-500">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded text-caption font-caption uppercase tracking-tighter w-fit">Caso de Éxito</span>
+<h3 class="font-headline-lg text-headline-lg mt-2">Ferretodo Cartago</h3>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="font-bold text-sm ml-1">5.0 • Ferretería</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-3xl md:text-4xl text-primary">verified</span>
+</div>
+<div class="relative aspect-[9/16] w-full max-w-[240px] md:max-w-[280px] mx-auto rounded-2xl overflow-hidden border-4 border-surface-container-highest shadow-2xl group">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 z-10"></div>
+<img alt="Mobile Website Mockup - Ferretodo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZAix005telmUw8WVjnVS-p34PIozO30bXmw8juBDph7eUWo2kjosnz9f0iQ5LqCkcVllIf18JO0JdyubTseTt0rl_ghI_ZxY0ot6Jl50hOnsJB64buxFR_9X02Ci_6bm8FFw0iL-5FPO_zTDDexsH9AtYKeAQzgbZh3dCYfVQzuggfORVtCQtHuI-SMSEE83Cc8WMmXk4532z2CVLIjc9Ucz8DmA7QNqGW2UMcg0fkpTWO_Q5HoJrS7HZSPlF4-VCUBGXHiHb_VY"/>
+<div class="absolute bottom-4 left-0 right-0 text-center z-20">
+<span class="text-white font-label-md text-caption uppercase tracking-widest">Digital Transformation</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-primary uppercase tracking-widest text-xs">Servicios Destacados</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 glass rounded-full text-caption">Herramientas</span>
+<span class="px-3 py-1 glass rounded-full text-caption">Plomería</span>
+<span class="px-3 py-1 glass rounded-full text-caption">Ferretería</span>
+<span class="px-3 py-1 glass rounded-full text-caption">Construcción</span>
+<span class="px-3 py-1 glass rounded-full text-caption">Pinturas</span>
+<span class="px-3 py-1 glass rounded-full text-caption">Eléctricos</span>
+</div>
+</div>
+</div>
+<!-- Results Block -->
+<div class="glass p-6 md:p-12 rounded-xl flex flex-col gap-8 border-primary/30 relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="material-symbols-outlined text-4xl text-primary">analytics</span>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded text-caption font-caption uppercase tracking-tighter">Métricas</div>
+</div>
+<h3 class="font-headline-lg text-headline-lg relative z-10">Resultados Directos</h3>
+<div class="flex flex-col gap-8 relative z-10">
+<div class="flex items-center gap-4 md:gap-6">
+<div class="flex flex-col items-center min-w-[80px]">
+<span class="text-3xl md:text-display-sm text-primary font-bold">+48%</span>
+<span class="text-[10px] text-primary/60 font-medium uppercase">Crecimiento</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-sm text-lg md:text-xl tracking-widest uppercase">VISIBILIDAD</span>
+<span class="text-caption text-on-surface-variant">148 vistas del perfil en Google Maps</span>
+</div>
+</div>
+<div class="flex items-center gap-4 md:gap-6">
+<div class="flex flex-col items-center min-w-[80px]">
+<span class="text-3xl md:text-display-sm text-primary font-bold">+266%</span>
+<span class="text-[10px] text-primary/60 font-medium uppercase">Crecimiento</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-sm text-lg md:text-xl tracking-widest uppercase">CONFIANZA</span>
+<span class="text-caption text-on-surface-variant">11 llamadas directas desde el perfil</span>
+</div>
+</div>
+<div class="flex items-center gap-4 md:gap-6">
+<div class="flex flex-col items-center min-w-[80px]">
+<span class="text-3xl md:text-display-sm text-primary font-bold">+8%</span>
+<span class="text-[10px] text-primary/60 font-medium uppercase">Crecimiento</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-sm text-lg md:text-xl tracking-widest uppercase">RESULTADOS</span>
+<span class="text-caption text-on-surface-variant">53 usuarios solicitaron indicaciones</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface">
+<div class="px-6 md:px-grid-margin max-w-[1440px] mx-auto">
+<div class="text-center mb-12 md:mb-16">
+<h2 class="font-display-sm text-display-sm mb-4">Nuestros 7 Pilares Estratégicos</h2>
+<p class="font-body-lg text-on-surface-variant">Optimizamos lo que tus clientes ven, sienten y deciden.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+<!-- Pillars -->
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">location_on</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Aparece donde tus clientes te buscan</h4>
+<p class="text-caption text-on-surface-variant">Aparece en Google Search y Maps cuando más te necesitan.</p>
+</div>
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">star</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Convierte opiniones en confianza</h4>
+<p class="text-caption text-on-surface-variant">Gestión estratégica de reseñas para construir reputación sólida.</p>
+</div>
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">chat</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Responde rápido, conecta mejor</h4>
+<p class="text-caption text-on-surface-variant">Automatización inteligente de WhatsApp Business para ventas.</p>
+</div>
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">public</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Convierte visitantes en clientes</h4>
+<p class="text-caption text-on-surface-variant">Diseño de páginas web que inspiran autoridad y acción.</p>
+</div>
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">thumb_up</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Destaca, conecta y mantente presente</h4>
+<p class="text-caption text-on-surface-variant">Contenido estratégico que te posiciona como referente.</p>
+</div>
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">videocam</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Cuenta tu historia, impacta y vende más</h4>
+<p class="text-caption text-on-surface-variant">Videos de alta calidad que captan la atención de tu audiencia.</p>
+</div>
+<div class="glass p-6 md:p-8 rounded-xl glass-hover">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">photo_camera</span>
+<h4 class="font-headline-lg text-body-lg mb-2 leading-tight">Imágenes que hablan bien de tu negocio</h4>
+<p class="text-caption text-on-surface-variant">Fotografía profesional que refleja calidad y credibilidad.</p>
+</div>
+<div class="p-6 md:p-8 rounded-xl border border-primary/20 flex items-center justify-center bg-primary/5">
+<p class="text-center text-primary font-bold text-sm md:text-base">Todo diseñado para maximizar tu conversión.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Lead Generation System -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-6 md:px-grid-margin" id="audit-section">
+<div class="max-w-[1000px] mx-auto glass p-8 md:p-20 rounded-2xl relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-primary/20 blur-[60px]"></div>
+<div class="text-center mb-12">
+<h2 class="font-display-sm text-display-sm mb-4">Optimizamos lo que tus clientes ven, sienten y deciden.</h2>
+<p class="font-body-md text-on-surface-variant">Solicita tu diagnóstico estratégico de 2 minutos. Gratis, directo y sin compromisos.</p>
+</div>
+<!-- Interaction trigger -->
+<div class="flex justify-center transition-all duration-500" id="form-trigger">
+<button class="group relative w-full sm:w-auto px-6 md:px-12 py-5 bg-primary text-on-primary font-label-md text-sm md:text-label-md rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95" onclick="toggleAuditForm()">
+<span class="relative z-10">Solicita tu auditoría gratuita de presencia digital</span>
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</button>
+</div>
+<!-- The Form -->
+<div class="hidden opacity-0 translate-y-8 transition-all duration-700 flex flex-col gap-8 max-w-md mx-auto" id="audit-form">
+<div class="flex flex-col gap-4">
+<label class="font-label-md text-label-md text-on-surface-variant">¿Cómo deseas recibir tu diagnóstico?</label>
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-full border border-outline-variant">
+<button class="py-2 rounded-full font-label-md transition-all bg-primary text-on-primary" id="btn-whatsapp" onclick="switchContact('whatsapp')">WhatsApp</button>
+<button class="py-2 rounded-full font-label-md transition-all text-on-surface-variant" id="btn-email" onclick="switchContact('email')">Correo Electrónico</button>
+</div>
+</div>
+<div class="flex flex-col gap-6" id="field-container">
+<div class="flex flex-col gap-2" id="whatsapp-field">
+<label class="text-caption font-caption text-on-surface-variant ml-2 uppercase tracking-widest">Número de WhatsApp</label>
+<input class="bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-on-surface-variant/30" placeholder="+34 600 000 000" type="tel"/>
+</div>
+<div class="hidden flex flex-col gap-2" id="email-field">
+<label class="text-caption font-caption text-on-surface-variant ml-2 uppercase tracking-widest">Email Corporativo</label>
+<input class="bg-surface-container-high border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-on-surface-variant/30" placeholder="nombre@tuempresa.com" type="email"/>
+</div>
+<button class="w-full bg-on-surface text-surface py-4 rounded-xl font-bold hover:bg-primary transition-colors mt-4 uppercase">Solicitar mi Auditoría Ahora</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating WhatsApp Button -->
+<div class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[90] flex items-center gap-3">
+<a class="hidden sm:flex px-4 py-2 rounded-xl text-label-md font-label-md shadow-xl border border-outline-variant/20 backdrop-blur-md bg-primary text-on-primary animate-bounce hover:scale-105 transition-transform" href="https://wa.me/3004613080">
+            Quiero mi auditoría gratis
+        </a>
+<a class="w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform group" href="https://wa.me/3004613080">
+<svg class="w-7 h-7 md:w-8 md:h-8 fill-white" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 3.107 1.28 4.847 1.281 5.177 0 9.389-4.213 9.391-9.389.001-2.507-.975-4.865-2.748-6.639-1.773-1.773-4.133-2.747-6.638-2.748-5.177 0-9.389 4.212-9.391 9.39.001 1.774.499 3.504 1.441 5.013l-.93 3.396 3.478-.912zm9.846-5.454c-.211-.106-1.248-.617-1.442-.687-.193-.07-.333-.106-.473.106-.14.212-.544.687-.667.828-.123.14-.246.158-.457.053-.211-.107-.89-.328-1.696-1.047-.626-.558-1.049-1.247-1.172-1.458-.123-.211-.013-.326.093-.431.094-.094.211-.247.317-.37.106-.124.14-.212.211-.353.07-.141.035-.265-.018-.37-.053-.106-.473-1.14-.648-1.563-.173-.413-.347-.357-.473-.363l-.404-.006c-.14 0-.368.053-.561.265-.193.212-.737.721-.737 1.758 0 1.037.755 2.039.86 2.18.106.141 1.484 2.266 3.596 3.175.502.217.893.346 1.198.443.505.161.964.138 1.326.084.405-.06 1.248-.51 1.423-1.004.175-.494.175-.917.123-1.005-.052-.088-.193-.14-.404-.247z"></path></svg>
+</a>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full pt-section-gap-mobile md:pt-section-gap-desktop pb-12 border-t border-outline-variant/20">
+<div class="grid grid-cols-12 px-6 md:px-grid-margin max-w-[1440px] mx-auto gap-y-12 md:gap-grid-gutter">
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img alt="Innova360 Logo" class="h-12 w-12 object-contain rounded-xl shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ZI5-M8-F0gRm7euJ4DXm_nGMQ7iSZjrPqBjWr6dmCaAiPAtulMJYQXn2k1GwW09t0UNpuG3qL3O9WrLpWBBglX_zPwlmgouTwkg_jtV5INHCsQBj3DxrVxUw4dl2GDAe9SaclyW_OD5plSPoj0-yBBYMTAkpMcIFrtLJhWtMidMAQmBQ4DsVA1RJoTWHYuyYZzALowoa6Gf1BH7Q5d5kwDMaLZ2PIDT_5FOlISHP9jSxkju5LC-82C4hPWz-ty_dtErXtuGabIY"/>
+<div class="font-headline-lg text-3xl md:text-headline-lg text-on-surface">Innova360</div>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-sm">
+                    Transformamos búsquedas en clientes. Elevando el estándar del diseño y la estrategia digital.
+                </p>
+</div>
+<div class="col-span-6 md:col-span-3 lg:col-span-2 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase">Ecosistema</h4>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Servicios</a>
+</div>
+<div class="col-span-6 md:col-span-3 lg:col-span-2 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase">Legal</h4>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Cookie Settings</a>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+<h4 class="font-label-md text-label-md text-primary uppercase">Global</h4>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Global Offices</a>
+<a class="text-on-surface-variant hover:text-primary transition-all font-body-md" href="#">Contact Support</a>
+<div class="mt-4 flex gap-4">
+<div class="w-10 h-10 rounded-full glass flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+<div class="w-10 h-10 rounded-full glass flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-xl">language</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 pt-12 border-t border-outline-variant/10 text-center">
+<p class="font-caption text-caption text-on-surface-variant">© 2024 Innova360. All rights reserved. Precision in Every Pixel.</p>
+</div>
+</div>
+</footer>
+<script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function toggleAuditForm() {
+            const trigger = document.getElementById('form-trigger');
+            const form = document.getElementById('audit-form');
+            
+            trigger.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+            setTimeout(() => {
+                trigger.classList.add('hidden');
+                form.classList.remove('hidden');
+                setTimeout(() => {
+                    form.classList.remove('opacity-0', 'translate-y-8');
+                }, 50);
+            }, 300);
+        }
+
+        function switchContact(type) {
+            const btnWa = document.getElementById('btn-whatsapp');
+            const btnEm = document.getElementById('btn-email');
+            const waField = document.getElementById('whatsapp-field');
+            const emField = document.getElementById('email-field');
+
+            if (type === 'whatsapp') {
+                btnWa.className = 'py-2 rounded-full font-label-md transition-all bg-primary text-on-primary';
+                btnEm.className = 'py-2 rounded-full font-label-md transition-all text-on-surface-variant';
+                waField.classList.remove('hidden');
+                emField.classList.add('hidden');
+            } else {
+                btnEm.className = 'py-2 rounded-full font-label-md transition-all bg-primary text-on-primary';
+                btnWa.className = 'py-2 rounded-full font-label-md transition-all text-on-surface-variant';
+                emField.classList.remove('hidden');
+                waField.classList.add('hidden');
+            }
+        }
+
+        // Smooth scroll reveal observer
+        const observerOptions = {
+            threshold: 0.05,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, main').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

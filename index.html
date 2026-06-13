@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innova360 | Auditoría de Presencia Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<!-- TopNavBar -->
+<nav class="navbar">
+    <div class="container navbar-inner">
+        <div class="brand">
+            <img alt="Innova360 Logo" class="brand-logo" src="./logo/Gemini_Generated_Image_y57qhhy57qhhy57q.png">
+            <div class="text-display-sm tracking-tighter">Innova360</div>
+        </div>
+        
+        <!-- Desktop Nav -->
+        <div class="nav-links">
+            <a class="nav-link active text-body-md" href="#">Home</a>
+            <a class="nav-link text-body-md" href="#">Solutions</a>
+            <a class="nav-link text-body-md" href="#">Insights</a>
+            <a class="nav-link text-body-md" href="#">Global Operations</a>
+        </div>
+        
+        <div class="nav-actions">
+            <button class="btn-primary hidden sm:block">Get Started</button>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="material-symbols-outlined text-display-sm" style="font-size: 32px">menu</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu Drawer -->
+<div class="mobile-drawer" id="mobile-menu">
+    <div class="mobile-drawer-header">
+        <div class="brand">
+            <img alt="Innova360 Logo" class="brand-logo" style="height:32px; width:32px" src="./logo/Gemini_Generated_Image_y57qhhy57qhhy57q.png">
+            <div class="text-headline-lg tracking-tighter">Innova360</div>
+        </div>
+        <button class="mobile-menu-toggle" id="mobile-menu-close">
+            <span class="material-symbols-outlined" style="font-size: 32px">close</span>
+        </button>
+    </div>
+    <div class="mobile-nav-links">
+        <a class="active" href="#">Home</a>
+        <a href="#">Solutions</a>
+        <a href="#">Insights</a>
+        <a href="#">Global Operations</a>
+    </div>
+    <div class="mt-auto">
+        <button class="btn-primary w-full" style="padding: 16px; font-size: 18px">Get Started</button>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<main class="hero container">
+    <div class="hero-grid">
+        <div class="hero-content">
+            <div class="hero-badge glass">
+                <span class="w-2 h-2" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-primary);" class="animate-pulse"></span>
+                <span class="text-label-md text-on-surface-variant text-uppercase tracking-widest" style="font-size: 12px">Premium Digital Craftsmanship</span>
+            </div>
+            <h1 class="text-display-lg text-gradient">
+                Si hoy un cliente busca tu negocio... <span class="block text-primary">¿te elige a ti o a tu competencia?</span>
+            </h1>
+            <p class="text-body-lg text-on-surface-variant max-w-2xl">
+                Descubre cómo te ven tus futuros clientes antes de decidir y qué oportunidades estás perdiendo sin darte cuenta.
+            </p>
+            <div class="flex gap-4" style="margin-top: 16px">
+                <button class="btn-large electric-glow" onclick="document.getElementById('audit-section').scrollIntoView({behavior: 'smooth'})" style="border-radius: var(--radius-full); font-weight: 500;">
+                    SOLICITA TU AUDITORÍA GRATUITA DE PRESENCIA DIGITAL
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-image-wrapper glass">
+                <div class="hero-image-overlay"></div>
+                <img alt="FerreTodo Contextual Brand Image" class="hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA46g-xvd3GQ3DIiNqUmvj-BTDKPM4RlCcW1zudoEscCiWuYKkxhGbRPvwdJHvqLRll3JUFA38roQTwcIR7QdYkG06fU6m0aviSWjzXVVkZxXNgz668bXPc8vPWL1ZFOscBov3Q1HIrv7_Eklxe4EiXlAB3eM_BT5bIm1gmt5vEww15qAjha-5CVzIZmY8HEiAS4shdm-OGJfKkm0rz-djRI1b1i2bBQkIrr-qoiEZ_QFR5rul3BythiJyxc6eXg-7xgqXZ45ooSN8">
+                
+                <div style="position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 24px; z-index: 20;">
+                    <div class="glass" style="padding: 8px 16px; border-radius: 8px; backdrop-filter: blur(12px);">
+                        <span class="text-primary text-label-md">Transformamos búsquedas en clientes.</span>
+                    </div>
+                </div>
+                
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 20;">
+                    <div class="glass" style="width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 36px;">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decorative Elements -->
+            <div style="position: absolute; top: -24px; right: -24px; width: 128px; height: 128px; background-color: rgba(173, 198, 255, 0.2); filter: blur(100px); z-index: -1;"></div>
+            <div style="position: absolute; bottom: -40px; left: -40px; width: 192px; height: 192px; background-color: rgba(173, 198, 255, 0.1); filter: blur(80px); z-index: -1;"></div>
+        </div>
+    </div>
+</main>
+
+<!-- Value Section: Real Case Results -->
+<section class="bg-lowest section-py border-y">
+    <div class="container">
+        <div class="flex-col items-center text-center mb-12">
+            <h2 class="text-display-sm mb-12" style="margin-bottom: 24px">El impacto de una estrategia digital sólida</h2>
+            <p class="text-body-lg text-on-surface-variant max-w-2xl">
+                No solo diseñamos webs, creamos activos digitales que impulsan resultados medibles.
+            </p>
+        </div>
+        <div class="value-grid">
+            <!-- Real Case Study -->
+            <div class="case-card glass glass-hover">
+                <div class="flex justify-between items-center" style="align-items: flex-start">
+                    <div class="flex-col gap-2">
+                        <span class="text-caption text-primary tracking-tighter text-uppercase" style="background-color: rgba(173,198,255,0.1); padding: 4px 12px; border-radius: 4px; width: fit-content;">Caso de Éxito</span>
+                        <h3 class="text-headline-lg">Ferretodo Cartago</h3>
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined" style="font-size: 14px">star</span>
+                            <span class="material-symbols-outlined" style="font-size: 14px">star</span>
+                            <span class="material-symbols-outlined" style="font-size: 14px">star</span>
+                            <span class="material-symbols-outlined" style="font-size: 14px">star</span>
+                            <span class="material-symbols-outlined" style="font-size: 14px">star</span>
+                            <span style="font-size: 14px; font-weight: 700; margin-left: 4px">5.0 • Ferretería</span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined text-primary" style="font-size: 36px">verified</span>
+                </div>
+                
+                <div style="position: relative; aspect-ratio: 9/16; width: 100%; max-width: 280px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 4px solid var(--color-surface-container-highest); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3)); z-index: 10;"></div>
+                    <img alt="Mobile Website Mockup" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZAix005telmUw8WVjnVS-p34PIozO30bXmw8juBDph7eUWo2kjosnz9f0iQ5LqCkcVllIf18JO0JdyubTseTt0rl_ghI_ZxY0ot6Jl50hOnsJB64buxFR_9X02Ci_6bm8FFw0iL-5FPO_zTDDexsH9AtYKeAQzgbZh3dCYfVQzuggfORVtCQtHuI-SMSEE83Cc8WMmXk4532z2CVLIjc9Ucz8DmA7QNqGW2UMcg0fkpTWO_Q5HoJrS7HZSPlF4-VCUBGXHiHb_VY">
+                    <div style="position: absolute; bottom: 16px; left: 0; right: 0; text-align: center; z-index: 20;">
+                        <span class="text-caption text-white tracking-widest text-uppercase" style="font-weight: 500">Digital Transformation</span>
+                    </div>
+                </div>
+                
+                <div class="flex-col gap-4">
+                    <p class="text-caption text-primary tracking-widest text-uppercase" style="font-size: 10px; font-weight: 500">Servicios Destacados</p>
+                    <div class="flex gap-2" style="flex-wrap: wrap">
+                        <span class="glass text-caption" style="padding: 4px 12px; border-radius: var(--radius-full)">Herramientas</span>
+                        <span class="glass text-caption" style="padding: 4px 12px; border-radius: var(--radius-full)">Plomería</span>
+                        <span class="glass text-caption" style="padding: 4px 12px; border-radius: var(--radius-full)">Ferretería</span>
+                        <span class="glass text-caption" style="padding: 4px 12px; border-radius: var(--radius-full)">Construcción</span>
+                        <span class="glass text-caption" style="padding: 4px 12px; border-radius: var(--radius-full)">Pinturas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Block -->
+            <div class="case-card glass glass-hover" style="border-color: rgba(173,198,255,0.3)">
+                <div class="flex justify-between" style="align-items: flex-start">
+                    <span class="material-symbols-outlined text-primary" style="font-size: 40px">analytics</span>
+                    <div class="text-caption text-primary text-uppercase tracking-tighter" style="background-color: rgba(173,198,255,0.2); padding: 4px 12px; border-radius: 4px;">Métricas</div>
+                </div>
+                <h3 class="text-headline-lg">Resultados Directos</h3>
+                
+                <div class="flex-col gap-8">
+                    <div class="flex items-center gap-6">
+                        <div class="flex-col items-center" style="min-width: 80px">
+                            <span class="text-display-sm text-primary" style="font-size: 36px">+48%</span>
+                            <span class="text-primary text-uppercase" style="font-size: 10px; opacity: 0.6; font-weight: 500">Crecimiento</span>
+                        </div>
+                        <div class="flex-col">
+                            <span class="text-uppercase tracking-widest" style="font-size: 18px; font-weight: 700; font-family: var(--font-family-base)">VISIBILIDAD</span>
+                            <span class="text-caption text-on-surface-variant">148 vistas del perfil en Google Maps</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="flex-col items-center" style="min-width: 80px">
+                            <span class="text-display-sm text-primary" style="font-size: 36px">+266%</span>
+                            <span class="text-primary text-uppercase" style="font-size: 10px; opacity: 0.6; font-weight: 500">Crecimiento</span>
+                        </div>
+                        <div class="flex-col">
+                            <span class="text-uppercase tracking-widest" style="font-size: 18px; font-weight: 700; font-family: var(--font-family-base)">CONFIANZA</span>
+                            <span class="text-caption text-on-surface-variant">11 llamadas directas desde el perfil</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="flex-col items-center" style="min-width: 80px">
+                            <span class="text-display-sm text-primary" style="font-size: 36px">+8%</span>
+                            <span class="text-primary text-uppercase" style="font-size: 10px; opacity: 0.6; font-weight: 500">Crecimiento</span>
+                        </div>
+                        <div class="flex-col">
+                            <span class="text-uppercase tracking-widest" style="font-size: 18px; font-weight: 700; font-family: var(--font-family-base)">RESULTADOS</span>
+                            <span class="text-caption text-on-surface-variant">53 usuarios solicitaron indicaciones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Pillars Section -->
+<section class="section-py">
+    <div class="container">
+        <div class="text-center mb-12">
+            <h2 class="text-display-sm" style="margin-bottom: 16px">Nuestros 7 Pilares Estratégicos</h2>
+            <p class="text-body-lg text-on-surface-variant">Optimizamos lo que tus clientes ven, sienten y deciden.</p>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">location_on</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Aparece donde tus clientes te buscan</h4>
+                <p class="text-caption text-on-surface-variant">Aparece en Google Search y Maps cuando más te necesitan.</p>
+            </div>
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">star</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Convierte opiniones en confianza</h4>
+                <p class="text-caption text-on-surface-variant">Gestión estratégica de reseñas para construir reputación sólida.</p>
+            </div>
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">chat</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Responde rápido, conecta mejor</h4>
+                <p class="text-caption text-on-surface-variant">Automatización inteligente de WhatsApp Business para ventas.</p>
+            </div>
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">public</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Convierte visitantes en clientes</h4>
+                <p class="text-caption text-on-surface-variant">Diseño de páginas web que inspiran autoridad y acción.</p>
+            </div>
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">thumb_up</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Destaca, conecta y mantente presente</h4>
+                <p class="text-caption text-on-surface-variant">Contenido estratégico que te posiciona como referente.</p>
+            </div>
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">videocam</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Cuenta tu historia, impacta y vende más</h4>
+                <p class="text-caption text-on-surface-variant">Videos de alta calidad que captan la atención de tu audiencia.</p>
+            </div>
+            <div class="pillar-card glass glass-hover">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px; margin-bottom: 16px">photo_camera</span>
+                <h4 class="text-body-lg" style="margin-bottom: 8px; font-weight: 600; line-height: var(--line-height-tight)">Imágenes que hablan bien de tu negocio</h4>
+                <p class="text-caption text-on-surface-variant">Fotografía profesional que refleja calidad y credibilidad.</p>
+            </div>
+            <div class="pillar-card flex items-center justify-center text-center" style="border: 1px solid rgba(173,198,255,0.2); background-color: rgba(173,198,255,0.05)">
+                <p class="text-primary" style="font-weight: 700">Todo diseñado para maximizar tu conversión.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lead Generation System -->
+<section class="section-py container" id="audit-section">
+    <div class="form-section glass">
+        <div style="position: absolute; top: -48px; left: 50%; transform: translateX(-50%); width: 96px; height: 96px; background-color: rgba(173,198,255,0.2); filter: blur(60px);"></div>
+        <div class="text-center mb-12">
+            <h2 class="text-display-sm" style="margin-bottom: 16px">Optimizamos lo que tus clientes ven, sienten y deciden.</h2>
+            <p class="text-body-md text-on-surface-variant">Solicita tu diagnóstico estratégico de 2 minutos. Gratis, directo y sin compromisos.</p>
+        </div>
+        
+        <!-- Interaction trigger -->
+        <div class="flex justify-center" id="form-trigger" style="transition: all 0.5s">
+            <button class="btn-primary" id="form-trigger-btn" style="padding: 20px 48px; font-size: 16px; position: relative; overflow: hidden">
+                <span>Solicita tu auditoría gratuita de presencia digital</span>
+            </button>
+        </div>
+        
+        <!-- The Form -->
+        <form class="hidden flex-col gap-8 max-w-md" id="audit-form" style="opacity: 0; transform: translateY(32px); transition: all 0.7s;">
+            <div class="flex-col gap-4">
+                <label class="text-label-md text-on-surface-variant">¿Cómo deseas recibir tu diagnóstico?</label>
+                <div class="form-toggle-btn">
+                    <button type="button" class="text-label-md active" id="btn-whatsapp">WhatsApp</button>
+                    <button type="button" class="text-label-md inactive" id="btn-email">Correo Electrónico</button>
+                </div>
+            </div>
+            
+            <div class="flex-col gap-6" id="form-inputs">
+                <div class="flex-col gap-2 text-center" id="whatsapp-field" style="padding: 16px; background-color: var(--color-surface-container-high); border-radius: var(--radius-xl);">
+                    <p class="text-body-md text-on-surface">Continuaremos la conversación por chat.</p>
+                    <p class="text-caption text-on-surface-variant" style="margin-top: 4px;">Serás redirigido a WhatsApp automáticamente.</p>
+                </div>
+                
+                <div class="hidden flex-col gap-2" id="email-field">
+                    <label class="text-caption text-on-surface-variant text-uppercase tracking-widest" style="margin-left: 8px">Email Corporativo</label>
+                    <input type="email" name="email" class="input-field" placeholder="nombre@tuempresa.com">
+                </div>
+                
+                <button type="submit" class="btn-submit" id="submit-btn">Solicitar mi Auditoría Ahora</button>
+            </div>
+            
+            <!-- Success Message -->
+            <div id="form-success" class="hidden glass" style="padding: 24px; border-radius: var(--radius-xl); text-align: center; border-color: var(--color-primary);">
+                <span class="material-symbols-outlined text-primary" style="font-size: 48px; margin-bottom: 16px;">check_circle</span>
+                <h3 class="text-headline-lg text-primary" style="margin-bottom: 8px;">¡Solicitud Recibida!</h3>
+                <p class="text-body-md text-on-surface">Nos pondremos en contacto contigo pronto para tu auditoría.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Floating WhatsApp Button -->
+<div class="floating-wa">
+    <a href="https://wa.me/3004613080" class="text-label-md animate-bounce" style="padding: 8px 16px; border-radius: var(--radius-xl); background-color: var(--color-primary); color: var(--color-on-primary); font-weight: 500; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid rgba(66,71,84,0.2); backdrop-filter: blur(12px);">
+        Quiero mi auditoría gratis
+    </a>
+    <a href="https://wa.me/3004613080" class="wa-icon group">
+        <svg style="width: 32px; height: 32px; fill: white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 3.107 1.28 4.847 1.281 5.177 0 9.389-4.213 9.391-9.389.001-2.507-.975-4.865-2.748-6.639-1.773-1.773-4.133-2.747-6.638-2.748-5.177 0-9.389 4.212-9.391 9.39.001 1.774.499 3.504 1.441 5.013l-.93 3.396 3.478-.912zm9.846-5.454c-.211-.106-1.248-.617-1.442-.687-.193-.07-.333-.106-.473.106-.14.212-.544.687-.667.828-.123.14-.246.158-.457.053-.211-.107-.89-.328-1.696-1.047-.626-.558-1.049-1.247-1.172-1.458-.123-.211-.013-.326.093-.431.094-.094.211-.247.317-.37.106-.124.14-.212.211-.353.07-.141.035-.265-.018-.37-.053-.106-.473-1.14-.648-1.563-.173-.413-.347-.357-.473-.363l-.404-.006c-.14 0-.368.053-.561.265-.193.212-.737.721-.737 1.758 0 1.037.755 2.039.86 2.18.106.141 1.484 2.266 3.596 3.175.502.217.893.346 1.198.443.505.161.964.138 1.326.084.405-.06 1.248-.51 1.423-1.004.175-.494.175-.917.123-1.005-.052-.088-.193-.14-.404-.247z"></path></svg>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-col-main">
+            <div class="flex items-center gap-2">
+                <img alt="Innova360 Logo" style="height: 48px; width: 48px; object-fit: contain; border-radius: var(--radius-xl); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);" src="./logo/Gemini_Generated_Image_y57qhhy57qhhy57q.png">
+                <div class="text-headline-lg">Innova360</div>
+            </div>
+            <p class="text-body-md text-on-surface-variant max-w-md">
+                Transformamos búsquedas en clientes. Elevando el estándar del diseño y la estrategia digital.
+            </p>
+        </div>
+        
+        <div class="footer-col-links">
+            <h4 class="text-label-md text-primary text-uppercase">Ecosistema</h4>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Home</a>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Portfolio</a>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Servicios</a>
+        </div>
+        
+        <div class="footer-col-links">
+            <h4 class="text-label-md text-primary text-uppercase">Legal</h4>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Privacy Policy</a>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Terms of Service</a>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Cookie Settings</a>
+        </div>
+        
+        <div class="footer-col-global">
+            <h4 class="text-label-md text-primary text-uppercase">Global</h4>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Global Offices</a>
+            <a href="#" class="text-on-surface-variant text-body-md" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-on-surface-variant)'">Contact Support</a>
+            
+            <div class="flex gap-4" style="margin-top: 16px">
+                <div class="glass" style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.8; cursor: pointer; transition: opacity 0.3s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                    <span class="material-symbols-outlined" style="font-size: 20px">share</span>
+                </div>
+                <div class="glass" style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0.8; cursor: pointer; transition: opacity 0.3s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
+                    <span class="material-symbols-outlined" style="font-size: 20px">language</span>
+                </div>
+            </div>
+        </div>
+        
+        <div style="grid-column: span 12; padding-top: 48px; border-top: 1px solid rgba(66,71,84,0.1); text-align: center;">
+            <p class="text-caption text-on-surface-variant">© 2024 Innova360. All rights reserved. Precision in Every Pixel.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
