@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btnWa = document.getElementById('btn-whatsapp');
             if (btnWa && btnWa.classList.contains('active')) {
                 const text = encodeURIComponent("hola he visto la web de innova 360 y deseo recibir mi auditoria gratis");
-                window.location.href = `https://api.whatsapp.com/send?phone=34697484787&text=${text}`;
+                window.location.href = `https://api.whatsapp.com/send?phone=34664289699&text=${text}`;
                 return;
             }
 
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.style.opacity = '0.7';
 
             // IMPORTANT: Replace the URL below with your actual Formspree endpoint URL
-            const formspreeEndpoint = 'https://formspree.io/f/xeewpjyd'; 
+            const formspreeEndpoint = 'https://formspree.io/f/xjgdzgrk'; 
             
             const formData = new FormData(form);
 
